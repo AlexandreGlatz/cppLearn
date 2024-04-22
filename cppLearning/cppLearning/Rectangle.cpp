@@ -1,5 +1,9 @@
 #include "header.h"
 
+Rectangle::Rectangle()
+{
+}
+
 Rectangle::Rectangle(int x,int y,int width,int height)
 {
 	m_posX = x;
@@ -37,9 +41,24 @@ int Rectangle::GetArea() const
 	return m_width * m_height;
 }
 
+void Rectangle::SetRectangle(int x, int y, int width, int height)
+{
+	m_posX = x;
+	m_posY = y;
+	m_width = width;
+	m_height = height;
+}
+
 int main() 
 {
 	Rectangle* pRect = new Rectangle(0,0,10,10);
+	Rectangle fig[10];
 
+	fig[0].SetBottom(10);
+
+	for (int i = 0; i < 10; i++)
+	{
+		fig[i].SetRectangle(0, i * 10, 10, 10);
+	}
 	return 0;
 }

@@ -3,6 +3,8 @@ class Rectangle
 {
 public:
 	Rectangle(int x, int y, int width, int height);
+	Rectangle();
+	void SetRectangle(int x, int y, int width, int height);
 
 	int GetBottom() const;
 	void SetBottom(int y);
